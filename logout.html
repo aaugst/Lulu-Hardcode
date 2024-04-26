@@ -1,0 +1,114 @@
+<!-- Final Project: Lulu -->
+<!-- ETI 461 -->
+<!-- 21 April 2024 -->
+<!-- Andreya Augst and Alex Delargy -->
+
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Final Project: Lulu</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+<!-- BODY -->
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/lulu2.png" alt="Lulu Logo"> 
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tv.html">TV</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="mystuff.html">My Stuff</a></li>
+                <li><a href="hubs.html">Hubs</a></li>
+            </ul>
+            <div class="dropdown">
+                <button class="dropbtn">A</button>
+                <div class="dropdown-content">
+                    <a href="manageprofiles.html">Manage Profiles</a>
+                    <a href="account.html">Account</a>
+                    <a href="helpcenter.html">Help Center</a>
+                    <a href="logout.html">Log Out</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <style>
+
+        .login-container {
+            padding: 20px;
+            width: 20%;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            width: 300px;
+            margin-left: 37%;
+            margin-top: 15%;        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 90%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+    <div class="login-container">
+        <form id="loginForm" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+    
+    <script>
+    function validateForm() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        if (username === "" || password === "") {
+            alert("Username and password cannot be empty");
+            return false;
+        }
+        alert("Login successful");
+        return false;
+    }
+    </script>
+
+</body>
+</html>

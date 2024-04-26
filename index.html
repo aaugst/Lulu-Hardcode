@@ -1,0 +1,134 @@
+<!-- Final Project: Lulu -->
+<!-- ETI 461 -->
+<!-- 21 April 2024 -->
+<!-- Andreya Augst and Alex Delargy -->
+
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Final Project: Lulu</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+<!-- BODY -->
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/lulu2.png" alt="Lulu Logo"> 
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tv.html">TV</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="mystuff.html">My Stuff</a></li>
+                <li><a href="hubs.html">Hubs</a></li>
+            </ul>
+            <div class="dropdown">
+                <button class="dropbtn">A</button>
+                <div class="dropdown-content">
+                    <a href="manageprofiles.html">Manage Profiles</a>
+                    <a href="account.html">Account</a>
+                    <a href="helpcenter.html">Help Center</a>
+                    <a href="logout.html">Log Out</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+<!-- Header Image -->
+    <div class="header-image">
+        <div class="header-text">
+            <a href="dune.html" class="header-button">Watch Now</a>
+        </div>
+    </div>
+
+<!-- Movies -->
+<div class="gallery-section-home">
+    <h1 class="gallery-header-home">MOVIES</h1>
+    <div class="gallery-home">
+        <a href="boho.html"><img src="images/movies/bohemian-rhapsody-web.jpg" alt="Photo 5" class="photo-home"></a>
+        <a href="jaws.html"><img src="images/movies/jaws.avif" alt="Photo 4" class="photo-home"></a>
+        <a href="asteroidcity.html"><img src="images/movies/asteroid_city.webp" alt="Photo 5" class="photo-home"></a>
+        <a href="jurassicpark.html"><img src="images/movies/jurassicpark.jpeg" alt="Photo 5" class="photo-home"></a>
+        <a href="joker.html"><img src="images/movies/joker.webp" alt="Photo 5" class="photo-home"></a>
+        <a href="blackswan.html"><img src="images/movies/black_swan.jpg" alt="Photo 5" class="photo-home"></a>
+        <a href="backtofuture.html"><img src="images/movies/back-to-the-future.jpg" alt="Photo 1" class="photo-home"></a>
+        <a href="parasite.html"><img src="images/movies/parasite.jpeg" alt="Photo 5" class="photo-home"></a>
+    </div>
+</div>
+
+<!-- TV Shows -->
+<div class="gallery-section-home">
+    <h1 class="gallery-header-home">TV</h1>
+    <div class="gallery-home">
+        <a href="hifi.html"><img src="images/tv/highfidelity.jpeg" alt="Photo 1" class="photo-home"></a>
+        <a href="shogun.html"><img src="images/tv/shogun.jpeg" alt="Photo 2" class="photo-home"></a>
+        <a href="blknarcissus.html"><img src="images/tv/BlackNarcissus.webp" alt="Photo 2" class="photo-home"></a>
+        <a href="catch22.html"><img src="images/tv/catch22.webp" alt="Photo 2" class="photo-home"></a>
+        <a href="cruelsummer.html"><img src="images/tv/cruel-summer.avif" alt="Photo 2" class="photo-home"></a>
+        <a href="got.html"><img src="images/tv/game-of-thrones.jpeg" alt="Photo 2" class="photo-home"></a>
+        <a href="onlymurders.html"><img src="images/tv/onlymurders.webp" alt="Photo 2" class="photo-home"></a>
+        <a href="strangerthings.html"><img src="images/tv/stranger-things.jpeg" alt="Photo 2" class="photo-home"></a>
+    </div>
+</div>
+
+<!-- News -->
+<div class="gallery-section-home">
+    <h1 class="gallery-header-home">News</h1>
+    <div class="gallery-home">
+        <a href="goodmorning.html"><img src="images/news/goodmorning.jpeg" alt="Photo 5" class="photo-home"></a>
+        <a href="boston25.html"><img src="images/news/boston.jpeg" alt="Photo 4" class="photo-home"></a>
+        <a href="anchorman.html"><img src="images/news/anchorman.jpeg" alt="Photo 5" class="photo-home"></a>
+        <a href="wpxi.html"><img src="images/news/wpxi.jpeg" alt="Photo 5" class="photo-home"></a>
+        <a href="fox.html"><img src="images/news/fox.jpg" alt="Photo 5" class="photo-home"></a>
+        <a href="abc.html"><img src="images/news/worldnewsabc.jpg" alt="Photo 5" class="photo-home"></a>
+        <a href="cbs.html"><img src="images/news/cbs.jpeg" alt="Photo 5" class="photo-home"></a>
+        <a href="bbc.html"><img src="images/news/bbc.jpeg" alt="Photo 5" class="photo-home"></a>
+    </div>
+</div>
+
+</body>
+</html>
+
+<!-- JS -->
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 4000);    
+        }
+
+        function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else { 
+            x.className = x.className.replace(" w3-show", "");
+        }
+        }
+
+        var modal = document.getElementById('ticketModal');
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        }
+    </script>
+
+    </body>
+</html>

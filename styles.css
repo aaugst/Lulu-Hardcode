@@ -1,0 +1,222 @@
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #333;
+    }
+
+    h1{
+        color: white;
+        font-size: 25px;
+        padding-left: 30px;
+        padding-top: 20px;
+    }
+
+    header {
+        background: #333;
+        color: white;
+        padding: 10px 0;
+        position: relative;
+    }
+
+    .title{
+        color: white;
+    }
+    
+    .subtitle{
+        color: white;
+    }
+
+    .description{
+        color: white;
+    }
+
+    .header-text {
+        position: absolute;
+        font-size: 25px;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+    }
+
+    .header-button {
+        display: block;
+        margin: 100px auto 0;
+        padding: 10px 10px;
+        color: white;
+        border: white;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 25px;
+    }
+
+    .header-image {
+        position: relative;
+        width: 100%;
+        height: 600px;
+        background: url('images/dune.jpg') no-repeat center center/cover;
+    }
+
+    .info-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        border: 1px solid #ccc;
+        max-width: 300px;
+        margin: 20px;
+    }
+
+    .info-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .info-title {
+        font-size: 20px;
+        color: #333;
+        margin-top: 10px;
+    }
+
+    .info-text {
+        font-size: 16px;
+        color: #ffffff;
+        margin-top: 5px;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .nav-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 0 20px;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropbtn {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        font-size: 16px;
+        border: 3px solid white;
+        border-radius: 50%;
+        cursor: pointer;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #333333;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: #555;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .gallery-home {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .header-text-home {
+        position: absolute;
+        font-size: 25px;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+    }
+
+    .photo {
+        width: 90%;
+        height: 350px;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        
+    }
+
+    .photo-home {
+        width: 90%;
+        height: 200px;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        
+    }
+
+    .boho-image {
+        position: relative;
+        width: 100%;
+        height: 600px;
+        background: url('images/movies/bohemian-rhapsody-web.jpg') no-repeat center center/cover;
+    }

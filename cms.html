@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Content Management System</title>
+    <style>
+      /* CSS styling can be added here for better presentation */
+    </style>
+</head>
+
+<body>
+
+<div id="content"></div>
+
+  <script>
+  // Define pages data
+  const pages = [
+    {
+      image: '',
+      description: 'Description for Page 1'
+    },
+    {
+      image: 'image2.jpg',
+      description: 'Description for Page 2'
+    },
+    {
+      image: 'image3.jpg',
+      description: 'Description for Page 3'
+    }
+  ];
+
+  // Function to generate HTML content for each page
+  function generatePages() {
+    const contentDiv = document.getElementById('content');
+    let html = '';
+    pages.forEach(page => {
+      html += `
+        <div class="page">
+          <img src="${page.image}" alt="Image">
+          <p>${page.description}</p>
+        </div>
+      `;
+    });
+    contentDiv.innerHTML = html;
+  }
+
+  // Call the function to generate pages on page load
+  window.onload = generatePages;
+  </script>
+
+</body>
+</html>
